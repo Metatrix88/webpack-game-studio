@@ -1,0 +1,9 @@
+.header {
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
+
+  &__home {
+    display: inline-block;
+  }
+}

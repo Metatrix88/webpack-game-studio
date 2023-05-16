@@ -1,0 +1,16 @@
+.footer {
+  background-color: var(--background-footer);
+  padding: 100px 0;
+
+  &__wrap {
+    margin-bottom: calc(var(--unit) * 9);
+  }
+
+  &__link {
+    color: var(--black);
+  }
+
+  &__copy {
+    font-size: 0.875rem;
+  }
+}

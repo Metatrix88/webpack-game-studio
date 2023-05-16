@@ -1,0 +1,15 @@
+.recommend {
+  &__title {
+    margin-bottom: calc(var(--unit) * 8);
+  }
+
+  &__icon {
+    width: 160px;
+    height: 160px;
+    margin-bottom: var(--gap);
+  }
+
+  &__icon-title {
+    margin-bottom: calc(var(--unit) * 6);
+  }
+}

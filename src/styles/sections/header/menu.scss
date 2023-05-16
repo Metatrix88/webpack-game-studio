@@ -1,0 +1,147 @@
+.menu {
+  &__col {
+    display: flex;
+    height: var(--header-height);
+    align-items: center;
+  }
+
+  &__first-level {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    position: relative;
+  }
+
+  &__first-level:hover {
+    padding: var(--gap) 0;
+  }
+
+  &__first-level a {
+    color: var(--black);
+    transition: color var(--a-speed) ease-in-out;
+  }
+
+  &__first-level a:hover {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  /* Сделал стрелочку только для первой ссылки */
+  &__first-level > ul ~ a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 12px;
+    margin-bottom: 2px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid var(--black);
+    transition: border-top-color var(--a-speed) ease-in-out;
+  }
+
+  &__first-level > a:hover::after {
+    border-top-color: var(--primary);
+  }
+
+  &__first-level ul {
+    display: none;
+    flex-direction: column;
+    width: 176px;
+    padding: var(--gap) calc(var(--gap) * 2) var(--gap) var(--gap);
+    gap: var(--gap);
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--unit);
+    font-size: 16px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    z-index: 1;
+    box-shadow: 0 5px 16px rgb(0 0 0 / 15%);
+    animation: menu-level-2 var(--a-speed) ease-in-out;
+  }
+
+  &__first-level:hover > ul {
+    display: flex;
+  }
+
+  @keyframes menu-level-2 {
+    0% {
+      top: 80%;
+      opacity: 0;
+    }
+
+    80% {
+      top: 100%;
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__first-level > ul a {
+    display: block;
+    position: relative;
+  }
+
+  &__first-level ul > li {
+    position: relative;
+  }
+
+  &__first-level ul > li > ul ~ a::after {
+    content: '';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid var(--black);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-left-color var(--a-speed) ease-in-out;
+  }
+
+  &__first-level ul > li ul {
+    left: 100%;
+    top: 0;
+    transform: translateX(calc(var(--unit) * 6));
+    animation: menu-level-next var(--a-speed) ease-in-out;
+  }
+
+  &__first-level ul > li:hover > ul {
+    display: flex;
+  }
+
+  @keyframes menu-level-next {
+    0% {
+      left: 80%;
+      opacity: 0;
+    }
+
+    80% {
+      left: 100%;
+      opacity: 0.8;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__first-level ul > li ul::before {
+    content: '';
+    display: inline-block;
+    width: calc(var(--unit) * 8);
+    height: calc(100% + 20px);
+    position: absolute;
+    top: -20px;
+    right: 100%;
+  }
+
+  &__first-level ul > li:hover > a::after {
+    border-left-color: var(--primary);
+  }
+}

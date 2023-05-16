@@ -1,0 +1,12 @@
+.tags {
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: calc(var(--unit) * 6);
+}
+
+.tag {
+  padding: var(--unit) var(--gap);
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  cursor: pointer;
+}

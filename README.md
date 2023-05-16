@@ -1,9 +1,4 @@
-# webpack-pug-scss-boilerplate
+# GameStudio
+My first page made with Pug and SCSS
 
-### Usage
-
-`npm install` from root directory to install all dependencies.
-
-`npm start` to start development server.
-
-`npm run build` to build project files.
+* [example design](https://www.figma.com/file/grIlzm1NNRdLUJeNtR66Us/GameStudio?node-id=1-2&t=lYQ1Ox8hVbHH92sf-0)
