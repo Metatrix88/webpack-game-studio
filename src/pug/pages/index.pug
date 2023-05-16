@@ -1,8 +1,21 @@
-include ../components/page
+include ../content/menu
+include ../content/index
 
-- var pageInfo = { title: 'Hello, World!' };
+include ../sections/header
+include ../sections/video-block
+include ../sections/game
+include ../sections/recommend
+include ../sections/footer
+
+include ../components/page
+include ../components/sprite
 
 +page(pageInfo)
-  h1 Hello, World!
-  img(src=require('../../assets/images/code.png'), alt='code')
-  .img
+  +sprite
+  +header(menu)
+  +video-block
+  section.container.content
+    .row
+      +game
+      +recommend
+  +footer

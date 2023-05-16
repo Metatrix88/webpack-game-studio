@@ -1,3 +1,3 @@
-const programName = 'Hello, World!';
-
-console.log(programName);
+// const programName = 'Hello, World!';
+//
+// console.log(programName);

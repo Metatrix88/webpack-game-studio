@@ -1,0 +1,24 @@
+mixin next-level-menu(data)
+  ul
+    each level in data
+      li
+        if level.nextLevel
+          +next-level-menu(level.nextLevel)
+        a(href=level.link)= level.name
+
+mixin header(menu)
+  header.header&attributes(attributes)
+    .container
+      .row.middle-lg
+        .col-lg-6
+          a.header__home(href='/')
+            svg.header__logo
+              use(href='#logo')
+        nav.col-lg-6.menu
+          ul.row
+            each level1 in menu
+              li.col-lg-4.center-lg.menu__col
+                .menu__first-level
+                  if level1.nextLevel
+                    +next-level-menu(level1.nextLevel)
+                  a(href=level1.link)= level1.name
