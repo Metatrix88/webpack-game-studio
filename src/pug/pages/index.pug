@@ -1,3 +1,4 @@
+include ../sections/header
 include ../components/page
 include ../components/sprite
 
@@ -5,53 +6,7 @@ include ../components/sprite
 
 +page(pageInfo)
   +sprite
-  header.header
-    .container
-      .row.middle-lg
-        .col-lg-6
-          a.header__home(href='/')
-            svg.header__logo
-              use(href='#logo')
-        nav.col-lg-6.menu
-          ul.row
-            li.col-lg-4.center-lg.menu__col
-              .menu__first-level
-                ul
-                  li
-                    ul
-                      li
-                        a(href='#') Google Play
-                      li
-                        a(href='#') App Store
-                    a(href='#') King
-                  li
-                    ul
-                      li
-                        a(href='#') Google Play
-                      li
-                        a(href='#') App Store
-                    a(href='#') Pouch
-                  li
-                    ul
-                      li
-                        a(href='#') Google Play
-                      li
-                        a(href='#') App Store
-                    a(href='#') Viking
-                  li
-                    ul
-                      li
-                        a(href='#') Google Play
-                      li
-                        a(href='#') App Store
-                    a(href='#') Centaur
-                a(href='#') Games
-            li.col-lg-4.center-lg.menu__col
-              .menu__first-level
-                a(href='#') Company
-            li.col-lg-4.center-lg.menu__col
-              .menu__first-level
-                a(href='#') Careers
+  +header
   section.video-block
     video.video-block__video(autoplay='', loop='', muted='')
       source(
