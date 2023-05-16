@@ -1,85 +1,21 @@
+include ../content/menu
+include ../content/index
+
 include ../sections/header
+include ../sections/video-block
+include ../sections/game
+include ../sections/recommend
+include ../sections/footer
+
 include ../components/page
 include ../components/sprite
 
-- var pageInfo = { title: 'GameStudio' };
-
 +page(pageInfo)
   +sprite
-  +header
-  section.video-block
-    video.video-block__video(autoplay='', loop='', muted='')
-      source(
-        src='https://res.cloudinary.com/intellectfox/video/upload/v1659362056/fe/production_ID_3866539_dxjgbj.mp4'
-      )
-      |
-      | Your browser does not support the video tag
-    .video-block__bg-light
-    .container.video-block__title-container
-      .row.end-lg
-        .col-lg-4
-          h1.video-block__title
-            span.primary GameStudio
-            |
-            | is one of the top 10
-            |
-            | mobile gaming companies in the world
+  +header(menu)
+  +video-block
   section.container.content
     .row
-      article.col-lg-8.game
-        h2.primary Castle stories
-        svg.game__icon
-          use(href='#castle')
-        p
-          | RPG? RTS? Castle stories is a unique strategy game. Legendary
-          | monsters. Magic arena. Epic duels. Multiplayer/PvP. Choose your
-          | tactics, jump on board, and battle against your opponents in the
-          | best card &amp; strategy game!
-        p
-          | Duel players from all around the world in this fun real-time
-          | strategy game! Collect and upgrade 40+ troops and spells: from the
-          | lovely Dryad to the tremendous Dragon! Play now, for free!
-        p
-          b Updated on
-          time.game__date Jul 19, 2022
-        .tags
-          .tag Card
-          .tag Card battler
-          .tag Multiplayer
-          .tag Competitive multiplayer
-        .apps
-          svg.apps__icon.apps__icon--google
-            use(href='#google-play')
-          svg.apps__icon.apps__icon--apple
-            use(href='#app-store')
-      aside.col-lg-4.recommend
-        h3.center-lg.recommend__title Over 1 million people play this game every month
-        .row
-          .center-lg.col-lg-6
-            svg.recommend__icon
-              use(href='#king')
-            h5.recommend__icon-title King
-          .center-lg.col-lg-6
-            svg.recommend__icon
-              use(href='#pouch')
-            h5.recommend__icon-title Pouch
-          .center-lg.col-lg-6
-            svg.recommend__icon
-              use(href='#viking')
-            h5.recommend__icon-title Viking
-          .center-lg.col-lg-6
-            svg.recommend__icon
-              use(href='#centaur')
-            h5.recommend__icon-title Viking
-  footer.footer
-    .container
-      .row.footer__wrap
-        .col-lg-3.center-lg.h3
-          a.footer__link(href='#') Privacy policy
-        .col-lg-3.center-lg.h3
-          a.footer__link(href='#') Terms of use
-        .col-lg-3.center-lg.h3
-          a.footer__link(href='#') Contacts
-        .col-lg-3.center-lg.h3
-          a.footer__link(href='#') Terms of use
-      .center-lg &copy; 2022 GameStudio, Inc. All rights reserved
+      +game
+      +recommend
+  +footer

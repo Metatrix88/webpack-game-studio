@@ -1,74 +1,3 @@
--
-  var menu = [
-    {
-      link: '#',
-      name: 'Games',
-      nextLevel: [
-        {
-          link: '#',
-          name: 'King',
-          nextLevel: [
-            {
-              link: '#',
-              name: 'Google Play',
-            },
-            {
-              link: '#',
-              name: 'App Store',
-            }
-          ]
-        },
-        {
-          link: '#',
-          name: 'Pouch',
-          nextLevel: [
-            {
-              link: '#',
-              name: 'Google Play',
-            },
-            {
-              link: '#',
-              name: 'App Store',
-            }]
-        },
-        {
-          link: '#',
-          name: 'Viking',
-          nextLevel: [
-            {
-              link: '#',
-              name: 'Google Play',
-            },
-            {
-              link: '#',
-              name: 'App Store',
-            }]
-        },
-        {
-          link: '#',
-          name: 'Centaur',
-          nextLevel: [
-            {
-              link: '#',
-              name: 'Google Play',
-            },
-            {
-              link: '#',
-              name: 'App Store',
-            }]
-        }
-      ]
-    },
-    {
-      link: '#',
-      name: 'Company',
-    },
-    {
-      link: '#',
-      name: 'Careers',
-    }
-  ];
-
 mixin next-level-menu(data)
   ul
     each level in data
@@ -77,8 +6,8 @@ mixin next-level-menu(data)
           +next-level-menu(level.nextLevel)
         a(href=level.link)= level.name
 
-mixin header
-  header.header
+mixin header(menu)
+  header.header&attributes(attributes)
     .container
       .row.middle-lg
         .col-lg-6
