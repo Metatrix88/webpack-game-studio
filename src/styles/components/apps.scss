@@ -1,0 +1,16 @@
+.apps {
+  display: flex;
+  gap: var(--gap);
+
+  &__icon {
+    height: 40px;
+  }
+
+  &__icon--google {
+    width: 135px;
+  }
+
+  &__icon--apple {
+    width: 120px;
+  }
+}
